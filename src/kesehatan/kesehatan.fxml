@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kesehatan.KesehatanController">
+   <children>
+      <Pane layoutX="4.0" layoutY="401.0" prefHeight="203.0" prefWidth="501.0" style="-fx-background-color: #2a83ff;">
+         <children>
+            <Label layoutX="34.0" layoutY="45.0" text="HASIL ANALISA KESEHATAN" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="12.0" text="BERAT BADAN IDEAL" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="240.0" layoutY="13.0" text="KG" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="ide" accessibleRole="IMAGE_VIEW" layoutX="200.0" layoutY="17.0" />
+            <JFXTextArea fx:id="ta1" editable="false" layoutX="46.0" layoutY="66.0" maxWidth="354.0" minWidth="259.0" prefHeight="33.0" prefWidth="354.0" promptText="Hasil" />
+            <JFXTextArea fx:id="ta2" editable="false" layoutX="46.0" layoutY="114.0" maxWidth="409.0" minWidth="259.0" prefHeight="75.0" prefWidth="354.0" promptText="Saran" />
+         </children>
+      </Pane>
+      <Pane layoutX="-6.0" prefHeight="98.0" prefWidth="515.0" style="-fx-background-color: #2a83ff;">
+         <children>
+            <Label layoutX="133.0" layoutY="25.0" prefHeight="49.0" prefWidth="259.0" text="INGIN SEHAT GAESS ??" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="53.0" layoutY="131.0" prefHeight="33.0" prefWidth="51.0" text="Nama" />
+      <Label layoutX="53.0" layoutY="182.0" prefHeight="27.0" prefWidth="51.0" text="Tinggi" />
+      <Label layoutX="53.0" layoutY="228.0" prefHeight="33.0" prefWidth="82.0" text="Berat Badan" />
+      <Label fx:id="jenis" layoutX="53.0" layoutY="276.0" prefHeight="33.0" prefWidth="82.0" text="Jenis Kelamin" />
+      <JFXTextField fx:id="nama" layoutX="135.0" layoutY="132.0" maxWidth="177.0" minWidth="177.0" prefHeight="31.0" prefWidth="177.0" />
+      <JFXTextField fx:id="tinggi" layoutX="135.0" layoutY="180.0" maxWidth="177.0" minWidth="177.0" prefHeight="31.0" prefWidth="177.0" />
+      <JFXTextField fx:id="bb" layoutX="135.0" layoutY="229.0" maxWidth="177.0" minWidth="177.0" prefHeight="31.0" prefWidth="177.0" />
+      <JFXRadioButton fx:id="lk" layoutX="157.0" layoutY="284.0" text="Laki">
+         <toggleGroup>
+            <ToggleGroup fx:id="grup" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="pr" layoutX="157.0" layoutY="309.0" text="Perempuan" toggleGroup="$grup" />
+      <Pane layoutX="79.0" layoutY="342.0" prefHeight="42.0" prefWidth="136.0" style="-fx-background-color: #2a83ff;">
+         <children>
+            <JFXButton layoutX="32.0" layoutY="6.0" onAction="#proses" text="PROSES" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="264.0" layoutY="342.0" prefHeight="42.0" prefWidth="136.0" style="-fx-background-color: #2a83ff;">
+         <children>
+            <JFXButton layoutX="35.0" layoutY="6.0" onAction="#hapus" text="HAPUS" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
